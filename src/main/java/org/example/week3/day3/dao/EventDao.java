@@ -1,11 +1,11 @@
-package org.example.month1.week3.day2.dao;
+package org.example.week3.day3.dao;
 
-import org.example.month1.week3.day2.entities.Event;
+import org.example.week3.day3.entities.Event;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
 
 public class EventDao {
     private EntityManagerFactory emf;

@@ -1,4 +1,4 @@
-package org.example.month1.week3.day2.entities;
+package org.example.week3.day3.entities;
 
 public enum TypeEvent {
     PUBLIC,

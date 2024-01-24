@@ -1,6 +1,6 @@
-package org.example.month1.week3.day2.entities;
+package org.example.week3.day3.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -20,6 +20,10 @@ public class Event {
     private TypeEvent typeEvent;
     @Column(name="max_member")
     private int maxMember;
+    @ManyToOne
+    @JoinColumn(name="location_id")
+    private Location location;
+
 
     public Event(String title,
                  LocalDate eventData,
@@ -72,6 +76,14 @@ public class Event {
 
     public void setMaxMember(int maxMember) {
         this.maxMember = maxMember;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     @Override
