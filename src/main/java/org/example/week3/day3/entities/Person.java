@@ -22,7 +22,6 @@ public class Person {
     private Gender gender;
     @OneToMany(mappedBy = "person")
     @Column(name="partecipation_list")
-    @OrderBy("event_data ASC")
     private List<Partecipation> partecipationList=new ArrayList<>();
 
     public Person() {}

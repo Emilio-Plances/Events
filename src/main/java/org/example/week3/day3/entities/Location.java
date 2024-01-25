@@ -13,9 +13,9 @@ public class Location {
     private int id;
     private String nome;
     private String citta;
-    @OneToMany
-    @OrderBy("event_data ASC")
+    @OneToMany(mappedBy = "location")
     private List<Event> events=new ArrayList<>();
+
     public Location(){}
 
     public Location(String nome, String citta) {

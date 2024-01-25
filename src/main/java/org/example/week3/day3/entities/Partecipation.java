@@ -9,10 +9,10 @@ public class Partecipation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @ManyToOne
-    @JoinColumn(name="person_id")
+    @JoinColumn(name="person_fk")
     private Person person;
     @ManyToOne
-    @JoinColumn(name="event_id")
+    @JoinColumn(name="event_fk")
     private Event event;
     @Enumerated(EnumType.STRING)
     private State state;

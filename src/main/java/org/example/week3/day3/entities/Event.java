@@ -2,6 +2,7 @@ package org.example.week3.day3.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="events")
@@ -21,9 +22,10 @@ public class Event {
     @Column(name="max_member")
     private int maxMember;
     @ManyToOne
-    @JoinColumn(name="location_id")
+    @JoinColumn(name="location_fk")
     private Location location;
-
+    @OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
+    private List<Partecipation> partecipation;
 
     public Event(String title,
                  LocalDate eventData,
