@@ -23,6 +23,9 @@ public class Person {
     @OneToMany(mappedBy = "person")
     @Column(name="partecipation_list")
     private List<Partecipation> partecipationList=new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name="athletes_fk")
+    private int athletes;
 
     public Person() {}
 

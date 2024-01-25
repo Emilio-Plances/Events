@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name="events")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -96,7 +97,6 @@ public class Event {
                 ", eventData=" + eventData +
                 ", description='" + description + '\'' +
                 ", typeEvent=" + typeEvent +
-                ", maxMember=" + maxMember +
-                '}';
+                ", maxMember=" + maxMember;
     }
 }
